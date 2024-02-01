@@ -1,0 +1,13 @@
+---
+//Component Import
+import MainHead from "./MainHead.astro";
+
+const { title = "My Astro Page", description = "My ramblings on my astro blog"} = Astro.props as Props;
+---
+
+<html lang="en">
+    <MainHead {title} {description}/>
+	<body>
+		<slot> Default Text </slot>
+	</body>
+</html>
